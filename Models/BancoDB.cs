@@ -12,7 +12,7 @@ namespace teste_.Models
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Cidade> Cidade { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
-            //ACESSO WEB //optionsBuilder.UseSqlServer(connectionString: @"Data Source = dbdev9.curitiba.pr.gov.br\dev2014; Initial Catalog = provacandidato; User ID = provacandidato; Password = desenvolvimento");
+            //ACESSO WEB //optionsBuilder.UseSqlServer(connectionString: @"Data Source = dbdev9.curitiba.pr.gov.br\dev2014; Initial Catalog = provacandidato; User ID = xxxxxxxx; Password = xxxxxxx");
             //ACESSO LOCALHOST
             optionsBuilder.UseSqlServer(connectionString: "Data Source=DELL-1\\SQLEXPRESS;Initial Catalog = provacandidato; Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         }
