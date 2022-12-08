@@ -1,0 +1,1 @@
+C:\Users\Lesenechal\OneDrive\Documentos\C#\PROVAICS\teste_\teste_\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll

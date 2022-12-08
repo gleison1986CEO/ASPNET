@@ -1,0 +1,58 @@
+﻿@model IEnumerable<teste_.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Clientes</h1>
+     <p>  
+        @Html.ActionLink("Novo", "Create")  
+        @using (Html.BeginForm())  
+        {  
+            <p>Buscar Cliente: @Html.TextBox("Buscar_Clientes")<br />  
+                <input type="submit" value="Search" />     
+            </p>       
+        }  
+    </p> 
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataNascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ativo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ativo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade.Nome)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Codigo">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Codigo">Dados</a> |
+                <a asp-action="Delete" asp-route-id="@item.Codigo">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
